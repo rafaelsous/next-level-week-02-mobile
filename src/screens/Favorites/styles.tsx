@@ -6,6 +6,10 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#F0F0F5',
   },
+
+  favoriteList: {
+    marginTop: -50,
+  }
 });
 
 export default styles;

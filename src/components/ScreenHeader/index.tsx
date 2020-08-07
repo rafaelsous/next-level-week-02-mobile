@@ -11,9 +11,10 @@ import styles from './styles';
 
 interface Props {
   title: string;
+  children?: React.ReactNode;
 }
 
-const ScreenHeader = ({ title }: Props) => {
+const ScreenHeader = ({ title, children }: Props) => {
   const { navigate } = useNavigation()
 
   function handleNavigateBack() {
@@ -31,6 +32,8 @@ const ScreenHeader = ({ title }: Props) => {
       </View>
 
       <Text style={styles.title}>{title}</Text>
+
+      { children }
     </View>
   );
 }
