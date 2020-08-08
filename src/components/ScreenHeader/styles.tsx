@@ -22,7 +22,11 @@ const styles = StyleSheet.create({
     color: '#FFF',
   },
 
-  subtitle: {},
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
 });
 
 export default styles;
