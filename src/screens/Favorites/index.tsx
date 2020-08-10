@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { View, ScrollView } from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
+import { useFocusEffect } from '@react-navigation/native';
 
 import ScreenHeader from '../../components/ScreenHeader';
 import TeacherItem, { Teacher } from '../../components/TeacherItem';
 
 import styles from './styles';
-import { useFocusEffect } from '@react-navigation/native';
 
 const Favorites: React.FC = () => {
   const [favorites, setFavorites] = useState([]);

@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { View, Image, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { RectButton } from 'react-native-gesture-handler';
+import { useFocusEffect } from '@react-navigation/native';
 
 import api from '../../services/api';
 
@@ -18,7 +19,7 @@ const Lading: React.FC = () => {
 
   const [totalConnections, setTotalConnections] = useState(0);
 
-  useEffect(() => {
+  useFocusEffect(() => {
     async function loadTotalConnections() {
       const { total } = await api.get('connections').then(response => {
         return response.data;
@@ -28,7 +29,7 @@ const Lading: React.FC = () => {
     }
 
     loadTotalConnections();
-  }, []);
+  });
 
   function handleNavigateToGiveClasses() {
     navigate('GiveClasses');
